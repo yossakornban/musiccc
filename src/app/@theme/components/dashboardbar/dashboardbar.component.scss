@@ -1,0 +1,84 @@
+@import '../../styles/themes';
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+@include nb-install-component() {
+  h6 {
+    text-align: center;
+  }
+
+  .actionbar {
+    // display: flex;
+    float: right;
+    // display: inline-block;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    background: #ffffff;
+    border-radius: 0.375rem;
+    -webkit-box-shadow: 0 2px 12px 0 #dfe3eb;
+    box-shadow: 0 2px 12px 0 #dfe3eb;
+
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right: 6rem;
+    padding-left: 0.5rem;
+    border-bottom: 1px solid #ebeef2;
+    border-top-left-radius: 0.375rem;
+    border-top-right-radius: 0.375rem;
+    color: #2a2a2a;
+    font-family: Source Sans Pro;
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    // width: 90%;
+    margin: 0 0 1rem;
+    margin-right: -1.5%;
+
+  }
+
+  .left-sidebar {
+    // display: flex;
+    float: left;
+    // display: inline-block;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    background: #ffffff;
+    border-radius: 0.375rem;
+    -webkit-box-shadow: 0 2px 12px 0 #dfe3eb;
+    box-shadow: 0 2px 12px 0 #dfe3eb;
+
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right: 2rem;
+    border-bottom: 1px solid #ebeef2;
+    border-top-left-radius: 0.375rem;
+    border-top-right-radius: 0.375rem;
+    color: #2a2a2a;
+    font-family: Source Sans Pro;
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    // width: 90%;
+    margin: 0 0 1rem;
+    margin-left: -1.5%;
+  }
+}
+
+.actionbar{
+  padding-right: 0.9rem !important;
+  padding-left: 0.9rem !important;
+}
+
+a {
+  font-size: 14px !important;
+  text-decoration: none;
+  color: nb-theme(color-fg);
+  &:hover {
+    color: rgba(250, 176, 40, 0.87) !important
+  }
+}

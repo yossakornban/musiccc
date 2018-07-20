@@ -1,0 +1,47 @@
+  nb-card-body[name="back"]{
+    background-image: url("/assets/images/news2.jpg");
+    background-size: 100%;
+    &:hover{
+      opacity: 0.8;
+      }
+  }
+
+  div[name="line"]{
+    border-bottom: solid 2px;
+    border-color: rgba(250, 176, 40, 0.87);
+  }
+
+   label[name="details"]{
+    color: white;
+    height: 66px;
+   }
+
+  .right{
+    text-align: right;
+  }
+
+  label[name="line"]{
+    color: !important;
+    font-weight: 1000;
+   }
+
+  div[name="bg"]{
+    background-color: rgba(180, 180, 180, 0.637);
+   }
+
+  div[name="height"]{
+    height: 166px;
+  }
+  
+  .col-md-4{
+    h5{ 
+      color: #fff;
+      }
+        &:hover{
+          h5{
+            color:rgba(250, 176, 40, 0.87);
+          }
+      }
+  }
+
+  

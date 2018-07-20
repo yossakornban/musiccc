@@ -1,0 +1,11 @@
+<div class="header-container" [class.left]="position === 'normal'" [class.right]="position === 'inverse'">
+  <div class="logo-containter">
+    <div class="logo" (click)="goToHome()">Music</div>
+  </div>
+</div>
+
+<div class="header-container right">
+    <div class="logo-containter">
+        <div class="logo" (click)="login()">Sign In</div>
+    </div>
+</div>

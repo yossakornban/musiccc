@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 ss-pointer" *ngFor="let title of title.data" (click)="onClick(title)">
+      <nb-card>
+        <nb-card-body [ngStyle]="{'background-image':getImg(title.img1)}">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="col-md-12" name="line">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <h5>
+                  <a>
+                    {{title.news_type}}
+                  </a>
+                </h5>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-md-12" name="bg">
+              <div class="col-md-12" name="height">
+                <br>
+                <label name="details">{{title.news_header | ellipsis:80 }}</label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12" name="bg">
+              <div class="col-md-6">
+                <i class="ion-ios-eye-outline" name="eyeicon"></i>
+              </div>
+              <div class="col-md-6">
+                <label name="details">{{title.post_date}}</label>
+              </div>
+            </div>
+          </div>
+        </nb-card-body>
+      </nb-card>
+      <br>
+    </div>
+  </div>

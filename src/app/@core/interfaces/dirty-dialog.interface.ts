@@ -1,0 +1,3 @@
+interface DirtyDialog {
+  pageIsDirty(): Boolean;
+}

@@ -1,0 +1,47 @@
+<div class="col-md-12">
+  <nb-card>
+    <nb-card-header>
+      <h1>Sign In
+      </h1>
+    </nb-card-header>
+    <nb-card-body>
+      <div class="form-group row">
+        <div class="offset-md-2 col-md-8">
+          <label>Username</label>
+          <div class="input-group has-person-icon">
+            <input type="text" class="form-control" placeholder="Username" [(ngModel)]="username">
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="offset-md-2 col-md-8">
+          <label>Password</label>
+          <input type="password" class="form-control" placeholder="Password" [(ngModel)]="password">
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="offset-md-2 col-md-5 validation-checkboxes">
+          <nb-checkbox status="success">Remember Me
+          </nb-checkbox>
+        </div>
+        <div class="offset-md-1 col-md-3">
+          <a href="http://localhost:4200/#/unsign/forgot" class="alert-link">Forget your password?</a>
+        </div>
+      </div>
+      <div class="offset-md-2 col-md-8" style="margin-top: 30px">
+        <button type="submit" class="btn btn-hero-success btn-lg" (click)="onLoggedin()">
+          <h5 style="color: white">Login</h5>
+        </button>
+        <!-- <button type="submit" class="btn btn-hero-success btn-lg" (click)="signinWithGoogle()">
+          <h5 style="color: white">Login With Google</h5>
+        </button> -->
+        <button type="submit" class="btn btn-hero-success btn-lg" (click)="signinWithMicrosoft()">
+          <h5 style="color: white">Login With Microsoft</h5>
+        </button>
+      </div>
+      <div class="offset-md-2 col-md-8" style="margin-top: 30px">
+        {{message}}
+      </div>
+    </nb-card-body>
+  </nb-card>
+</div>

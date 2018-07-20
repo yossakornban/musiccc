@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <mc-breadcrumbs class="left-sidebar"></mc-breadcrumbs>
+    </div>
+    <div class="col-md-6">
+      <div class="actionbar">
+        <a *ngFor="let action of actions" href="#" [class.selected]="action.selected" [attr.title]="action.name" (click)="actionSelect(action)">
+          <i [attr.class]="action.icon"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

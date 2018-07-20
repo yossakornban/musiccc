@@ -1,0 +1,75 @@
+<div class="container">
+  <div class="col-md-12 ss-pointer" *ngFor="let title of title.data" (click)="onClick(title)" [ngSwitch]="title.position">
+    <nb-card *ngSwitchCase=1>
+      <nb-card-body name="back">       
+        <div class="row" name="height">
+          <div class="col-md-4" name="bg">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="col-md-12" name="line">
+                  <br>
+                  <h5>
+                    <a>
+                      {{title.news_type}}
+                    </a>
+                  </h5>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="col-md-12">
+                  <label name="details">{{title.news_header | ellipsis:80}}</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8">
+              </div>
+              <div class="col-md-4">
+                <label name="details">{{title.post_date}}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nb-card-body>
+    </nb-card>
+    <nb-card *ngSwitchCase=2>
+      <nb-card-body name="back">
+        <div class="row" name="height">
+          <div class="col-md-8">
+          </div>
+          <div class="col-md-4" name="bg">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="col-md-12" name="line">
+                  <br>
+                  <h5 class="right">
+                    {{title.news_type}}
+                  </h5>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="col-md-12">
+                  <label class="right" name="details">{{title.news_header | ellipsis:80}}</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8">
+              </div>
+              <div class="col-md-4">
+                <label name="details">{{title.post_date}}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nb-card-body>
+    </nb-card>
+    <br>
+  </div>
+</div>

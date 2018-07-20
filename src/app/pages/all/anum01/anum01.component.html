@@ -1,0 +1,401 @@
+<div class="container">
+  <ngx-actionbar [action]="action" (save)="onSave($event)" (search)="onSearch($event)" (print)="onPrint($event)"></ngx-actionbar>
+  <nb-card>
+    <nb-card-body>
+      <form [formGroup]="form">
+        <nb-tabset>
+          <nb-tab tabTitle="{{ 'LB_017' | translate }}">
+
+            <nb-card>
+              <nb-card-header>
+                <div class="col-md-12">
+                  <i class="ion-person"></i>
+                  <label>{{ 'LB_003' | translate }}</label>
+                </div>
+              </nb-card-header>
+              <nb-card-body>
+                <div class="col-md-12">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="row">
+                        <div class="col-md-12 redio">
+                          <label name='colon'>{{ 'LB_004' | translate }}</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12 label-name">
+                          <div class="row form-group">
+                            <div class="col-sm-3 col-md-3 col-lg-3">
+                              <label class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" name="title" checked>
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">{{ 'LB_006' | translate }}</span>
+                              </label>
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3">
+                              <label class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" name="title" checked>
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">{{ 'LB_007' | translate }}</span>
+                              </label>
+                            </div>
+                            <div class="col-sm-4 col-md-4 col-lg-4">
+                              <label class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" name="title" checked>
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">{{ 'LB_008' | translate }}</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <div class="col-sm-12 col-md-12">
+                          <label name='colon'>{{ 'LB_001' | translate }} </label>
+                          <input class="form-control" type="text" name="firstname" formControlName="firstname" placeholder="{{ 'LB_001' | translate }}"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <div class="col-sm-12 col-md-12">
+                          <label name='colon'>{{ 'LB_002' | translate }} </label>
+                          <input class="form-control" type="text" name="lastname" formControlName="lastname" placeholder="{{ 'LB_002' | translate }}"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <div class="col-md-12">
+                          <label name='colon'>{{ 'LB_005' | translate }} </label>
+                          <input class="form-control" type="number" name="mobile" formControlName="mobile" placeholder="{{ 'LB_005' | translate }}"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <div class="col-md-12">
+                          <label name='colon'>{{ 'LB_009' | translate }} </label>
+                          <input class="form-control" type="text" name="email" formControlName="email" placeholder="{{ 'LB_009' | translate }}" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </nb-card-body>
+            </nb-card>
+            <nb-card>
+              <nb-card-header>
+                <div class="col-md-12">
+                  <i class="ion-ios-location"></i>
+                  <label>
+                    {{ 'LB_010' | translate }}
+                  </label>
+                </div>
+              </nb-card-header>
+              <nb-card-body>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div class="col-md-3">
+                        <label name='colon'>{{ 'LB_011' | translate }} </label>
+                        <select class="form-control" id="country" name="country" formControlName="country">
+                          <option>ไทย</option>
+                          <option>พม่า</option>
+                          <option>ลาว</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div class="col-md-12">
+                        <label name='colon'>{{ 'LB_010' | translate }} </label>
+                        <textarea rows="5" class="form-control" name="address" formControlName="address"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <div class="col-md-12">
+                        <label name='colon'>{{ 'LB_012' | translate }}</label>
+                        <select class="form-control" id="province" name="province" formControlName="province">
+                          <option>กรุงเทพ</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <div class="col-md-12">
+                        <label name='colon'>{{ 'LB_013' | translate }}</label>
+                        <select class="form-control" id="District" name="district" formControlName="district">
+                          <option>จตุจักร</option>
+                          <option>บางกะปิ</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <div class="col-md-12">
+                        <label name='colon'>{{ 'LB_014' | translate }}</label>
+                        <select class="form-control" id="Canton" name="canton" formControlName="canton">
+                          <option>รัชดา</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <div class="col-md-12">
+                        <label name='colon'>{{ 'LB_015' | translate }}</label>
+                        <input class="form-control" type="number" name="postcode" formControlName="postcode" required placeholder="{{ 'LB_015' | translate }}"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <div class="col-md-12">
+                        <label name='colon'>{{ 'LB_016' | translate }}</label>
+                        <input class="form-control" type="number" name="tel" formControlName="tel" placeholder="{{ 'LB_016' | translate }}" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </nb-card-body>
+            </nb-card>
+          </nb-tab>
+          <nb-tab tabTitle="{{ 'LB_018' | translate }}">
+            <nb-card>
+              <nb-card-header>
+                <div class="col-md-12">
+                  <label>
+                    <i class="ion-briefcase"></i>
+                    {{ 'LB_018' | translate }}
+                  </label>
+                </div>
+              </nb-card-header>
+              <nb-card-body>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <div class="col-md-12">
+                        <label name='colon'>{{ 'LB_020' | translate }}</label>
+                        <select class="form-control" id="Category" name="category" formControlName="category">
+                          <option>รับจ้าง</option>
+                          <option>ข้าราชการ</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <div class="col-md-12">
+                        <label name='colon'>{{ 'LB_021' | translate }}</label>
+                        <select class="form-control" id="่Jobs" name="่jobs" formControlName="jobs">
+                          <option>ขับรถ</option>
+                          <option>ทหาร</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <div class="col-md-12">
+                        <label name='colon'>{{ 'LB_022' | translate }} </label>
+                        <select class="form-control" id="Position" name="position" formControlName="position">
+                          <option>ขับรถบรรทุก</option>
+                          <option>ผู้บังคับบัญชา</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div class="col-md-3">
+                        <label name='colon'>{{ 'LB_011' | translate }} </label>
+                        <select class="form-control" id="country" name="jobcountry" formControlName="jobcountry">
+                          <option value="">ไทย</option>
+                          <option>พม่า</option>
+                          <option>ลาว</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div class="col-md-12">
+                        <label name='colon'>{{ 'LB_010' | translate }} </label>
+                        <textarea rows="5" class="form-control" name="jobaddress" formControlName="jobaddress"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <div class="col-md-12">
+                        <label name='colon'>{{ 'LB_012' | translate }}</label>
+                        <select class="form-control" id="province" name="jobprovince" formControlName="jobprovince">
+                          <option>กรุงเทพ</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <div class="col-md-12">
+                        <label name='colon'>{{ 'LB_013' | translate }}</label>
+                        <select class="form-control" id="District" name="jobdistrict" formControlName="jobdistrict">
+                          <option>จตุจักร</option>
+                          <option>บางกะปิ</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <div class="col-md-12">
+                        <label name='colon'>{{ 'LB_014' | translate }}</label>
+                        <select class="form-control" id="Canton" name="jobcanton" formControlName="jobcanton">
+                          <option>รัชดา</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <div class="col-md-12">
+                        <label name='colon'>{{ 'LB_015' | translate }}</label>
+                        <input class="form-control" type="number" name="jobpostcode" formControlName="jobpostcode" placeholder="{{ 'LB_015' | translate }}"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <div class="col-md-12">
+                        <label name='colon'>{{ 'LB_016' | translate }}</label>
+                        <input class="form-control" type="number" name="jobtel" formControlName="jobtel" placeholder="{{ 'LB_016' | translate }}"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </nb-card-body>
+            </nb-card>
+          </nb-tab>
+          <nb-tab tabTitle="{{ 'LB_019' | translate }}">
+            <nb-card>
+              <nb-card-header>
+                <div class="col-md-12">
+                  <i class="ion-university"></i>
+                  <label>
+                    {{ 'LB_019' | translate }}
+                  </label>
+                </div>
+              </nb-card-header>
+              <nb-card-body>
+                <div class="col-md-12">
+                  <label>
+                    {{ 'LB_023' | translate }}
+                  </label>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <div class="col-md-12">
+                        <label name='colon'>{{ 'LB_024' | translate }}</label>
+                        <select class="form-control" id="education" name="education" formControlName="education">
+                          <option>ปริญญาตรี</option>
+                          <option>ปริญญาโท</option>
+                          <option>ปริญญาเอก</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <div class="col-md-12">
+                        <label name='colon'>{{ 'LB_025' | translate }}</label>
+                        <select class="form-control" id="yearstudy " name="yearstudy" formControlName="yearstudy">
+                          <option>2540</option>
+                          <option>2539</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <div class="col-md-12">
+                        <label name='colon'>{{ 'LB_026' | translate }}</label>
+                        <select class="form-control" id="honor" name="honor" formControlName="honor">
+                          <option>อันดับหนึ่ง</option>
+                          <option>อันดับสอง</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <div class="col-md-12">
+                        <label name='colon'>{{ 'LB_027' | translate }}</label>
+                        <select class="form-control" id="faculty" name="faculty" formControlName="faculty">
+                          <option value="">วิศวกรรมศาสตร์</option>
+                          <option>บริหารธุรกิจ</option>
+                          <option>นิเทศศาสตร์</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <div class="col-md-12">
+                        <label name='colon'>{{ 'LB_028' | translate }}</label>
+                        <select class="form-control" id="major" name="major" formControlName="major">
+                          <option value="">วิศวกรรมคอมพิวเตอร์</option>
+                          <option>บริหารธุรกิจ</option>
+                          <option>สื่อโฆษณา</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <div class="col-md-12">
+                    <ng2-smart-table [source]="data" [settings]="settings">
+                    </ng2-smart-table>
+                  </div>
+                </div>
+              </nb-card-body>
+            </nb-card>
+          </nb-tab>
+        </nb-tabset>
+      </form>
+    </nb-card-body>
+  </nb-card>
+</div>

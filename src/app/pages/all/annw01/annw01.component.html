@@ -1,0 +1,51 @@
+<div class="container">
+  <ngx-actionbar [action]="action" (save)="onSave($event)" (search)="onSearch($event)" (print)="onPrint($event)"></ngx-actionbar>
+  <nb-card>
+    <nb-card-body>
+      <form [formGroup]="form">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label name='colon'>{{ 'LB_029' | translate }} </label>
+                <input class="form-control" type="text" name="news_header" formControlName="news_header" id="newsheader" placeholder="{{ 'LB_029' | translate }}"
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label name='colon'>{{ 'LB_030' | translate }} </label>
+                <select class="form-control" id="news_type" formControlName="news_type" name="typenews">
+                  <option>ประชาสัมพันธ์</option>
+                  <option>กิจกรรม</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="row">
+            <div class="col-12" style="text-align: center">
+              <input type="file" name="upload" formControlName="img_title" (change)="onFileChanged($event)">
+            </div>
+          </div> -->
+          <div class="row">
+            <div class="col-md-12">
+              <label name='colon'>{{ 'LB_031' | translate }} </label>
+              <quill-editor #editor [formControl]="form.controls['news_detail']"></quill-editor>
+            </div>
+          </div>
+        </div>
+      </form>
+    </nb-card-body>
+  </nb-card>
+</div>
+
+<button (click)="setPageState()">Set Page State</button>
+<button (click)="resetPageState()">Reset Page State</button>
+<button (click)="check()">Check Page State</button>
+
+<div *ngFor="let row of states | async">
+  Page : {{row.page}}
+  <div *ngFor="let col of row.states">
+    Key : {{col.key}}, Value : {{col.value}}
+  </div>
+</div>

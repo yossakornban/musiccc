@@ -1,0 +1,47 @@
+  nb-card-body{
+    // background-image: url("/assets/images/alumni2.jpg");
+    background-repeat: no-repeat;
+    background-size: 200%;
+    &:hover{
+      background-color: rgba(192, 190, 188, 0.425);
+      opacity: 0.8;
+      }
+  }
+
+  div[name="line"]{
+    border-bottom: solid 2px;
+    border-color: rgba(250, 176, 40, 0.87);
+  }
+
+  i[name="eyeicon"]{
+    font-size: 25px;
+    color: #fff;
+  }
+
+  label[name="details"]{
+    color: white;
+  }
+
+  div[name="bg"]{
+    background-color: rgba(180, 180, 180, 0.637);
+  }
+
+  div[name="height"]{
+    height: 76px;
+  }
+
+  .col-md-4{
+    h5 a{ 
+      color: #fff;
+      }
+        &:hover{
+          h5 a{
+            color:rgba(250, 176, 40, 0.87);
+          }
+          .back{
+            background-color: rgba(192, 190, 188, 0.425);
+          }
+      }
+  }
+
+  
